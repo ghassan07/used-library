@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    /* Set the background color for the entire page to grey */
+    body {
+      background-color: #ccc; /* Grey background color */
+      margin: 0; /* Remove default margin */
+      padding: 0; /* Remove default padding */
+      font-family: Arial, sans-serif; /* Change font */
+    }
+
+    /* Add CSS to style the form */
+    section {
+      /* Remove the background image */
+      /* background-image: url('https://via.placeholder.com/1200x800'); Example image URL */
+      /* background-size: cover; Cover the entire section with the background image */
+      /* background-repeat: no-repeat; Prevent the background image from repeating */
+      padding: 20px; /* Add padding for spacing */
+    }
+
+    form {
+      max-width: 400px; /* Limit form width */
+      margin: 0 auto; /* Center the form */
+      background-color: rgba(255, 255, 255, 0.8); /* Background color for the form with some transparency */
+      padding: 20px; /* Add padding for spacing */
+    }
+
+    div {
+      margin-bottom: 15px; /* Add margin between form elements */
+    }
+
+    label {
+      font-size: 18px; /* Increase font size for labels */
+      display: block; /* Display labels as block elements for spacing */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%; /* Make input and textarea elements full width */
+      padding: 10px; /* Add padding to input and textarea elements */
+      font-size: 16px; /* Increase font size for input and textarea */
+      border: 2px solid #ccc; /* Add border */
+      border-radius: 5px; /* Add border radius */
+    }
+
+    textarea {
+      height: 150px; /* Increase the height of the textarea */
+    }
+
+    button[type="submit"] {
+      background-color: #007BFF; /* Button background color */
+      color: #fff; /* Button text color */
+      border: none; /* Remove button border */
+      border-radius: 5px; /* Add border radius to button */
+      padding: 12px 20px; /* Add padding to button */
+      font-size: 18px; /* Increase font size for button text */
+      cursor: pointer; /* Add pointer cursor on hover */
+    }
+
+    /* Style the status message div */
+    #status {
+      font-size: 16px;
+      font-weight: bold;
+      color: #007BFF;
+    }
+
+    /* Style the return button */
+    #return-button {
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 12px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <form action="https://formspree.io/f/meqbryay" method="POST">
+      <div>
+        <label for="firstname">الاسم:</label>
+        <input type="text" id="firstname" name="firstname">
+      </div>
+      <div>
+        <label for="lastName">العائلة</label>
+        <input type="text" id="lastName" name="lastName">
+      </div>
+      <div>
+        <label for="email"> Email:</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div>
+        <label for="message">ما الكتاب الذي تريده؟</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      <!-- Your other form fields go here -->
+      <div>
+        <button type="submit">Send</button>
+      </div>
+    </form>
+    <div id="status"></div>
+	
+    <!-- Return button -->
+    <button id="return-button" onclick="window.location.href = 'new 1.html';">Return</button>
+  </section>
+</body>
+</html>

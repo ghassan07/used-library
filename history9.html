@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>استئجار كتب</title>
+    
+	<style>
+	.img-size {
+  width: 500px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+}
+	body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#new 1">الصفحة الرئيسية</a>
+  <a href="new 2.html">للاستعمال</a>
+  <a href="new 3.html">للتبرع</a>
+  <a href="new 4">مزيد</a>
+</div>
+	<style>
+
+        /* Add CSS to make text and button bigger */
+        #amountDisplay {
+            font-size: 36px; /* Increase the font size for the text */
+        }
+
+        #buyButton {
+            font-size: 24px; /* Increase the font size for the button */
+            margin-bottom: 20px; /* Add margin at the bottom of the button */
+        }
+
+        body {
+            background-color: #7F7675; /* Set the background color for the entire page */
+        }
+
+        .content {
+            text-align: right;
+            direction: rtl;
+        }
+
+        .right-align {
+            text-align: right;
+            direction: rtl;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-style: Brush Script;
+            font-weight: bold;
+            font-size: 70px;
+            color: black;
+        }
+
+        /* Style for the book image */
+        #bookImage {
+            float: left; /* Float the image to the left */
+            margin-right: -20000px; /* Add margin to the right of the image */
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <p id="bookInfo">دروس في التاريخ للصف التاسع</p>
+    <div id="amountDisplay"></div>
+    <!-- Add a button for "I want to rent" -->
+    <button id="buyButton" class="right-align">اريد الاستئجار</button>
+
+    <img id="bookImage" src="" alt="" class="img-size"> <!-- Replace "book.jpg" with the actual image file path -->
+
+</div>
+
+<script>
+    // Retrieve the shared value from localStorage or set it to 0 if not present
+    let history_9 = parseInt(localStorage.getItem('history9')) || 0;
+
+    // Function to update the amount display
+    function updateAmountDisplay() {
+        const amountDisplay = document.getElementById("amountDisplay");
+        if (history_9 > 0) {
+            amountDisplay.innerHTML = "عدد الكتب المتوفرة للإيجار: " + history_9;
+        } else {
+            amountDisplay.innerHTML = "غير متوفرة";
+        }
+    }
+
+    // Initial display of the amount
+    updateAmountDisplay();
+
+    // Add a click event listener for the "I want to rent" button
+    document.getElementById("buyButton").addEventListener("click", function () {
+        if (history_9 > 0) {
+            // Decrement the book count
+            history_9 -= 1;
+            
+            // Update the amount in localStorage
+            localStorage.setItem('history9', history_9.toString());
+
+            // Redirect to the "sendmail.html" page
+            window.location.href = "sendmail.html";
+        } else {
+            alert("عذرًا، الكتاب غير متوفر للإيجار.");
+        }
+    });
+</script>
+</body>
+</html>

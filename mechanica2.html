@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>استئجار كتب</title>
+    
+	<style>
+	.img-size {
+  width: 500px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+}
+	body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#new 1">الصفحة الرئيسية</a>
+  <a href="new 2.html">للاستعمال</a>
+  <a href="new 3.html">للتبرع</a>
+  <a href="new 4">مزيد</a>
+</div>
+	<style>
+
+        /* Add CSS to make text and button bigger */
+        #amountDisplay {
+            font-size: 36px; /* Increase the font size for the text */
+        }
+
+        #buyButton {
+            font-size: 24px; /* Increase the font size for the button */
+            margin-bottom: 20px; /* Add margin at the bottom of the button */
+        }
+
+        body {
+            background-color: #7F7675; /* Set the background color for the entire page */
+        }
+
+        .content {
+            text-align: right;
+            direction: rtl;
+        }
+
+        .right-align {
+            text-align: right;
+            direction: rtl;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-style: Brush Script;
+            font-weight: bold;
+            font-size: 70px;
+            color: black;
+        }
+
+        /* Style for the book image */
+        #bookImage {
+            float: left; /* Float the image to the left */
+            margin-right: -20000px; /* Add margin to the right of the image */
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <p id="bookInfo">الفصول في الميكانيكا النيوتونية الجزءالثاني</p>
+    <div id="amountDisplay"></div>
+    <!-- Add a button for "I want to rent" -->
+    <button id="buyButton" class="right-align">اريد الاستئجار</button>
+
+    <img id="bookImage" src="data:image/jpeg;base64,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" alt="המעיין השלם"  class="img-size"> <!-- Replace "book.jpg" with the actual image file path -->
+
+</div>
+
+<script>
+    // Retrieve the shared value from localStorage or set it to 0 if not present
+    let mechanica_2 = parseInt(localStorage.getItem('mechanica2')) || 0;
+
+    // Function to update the amount display
+    function updateAmountDisplay() {
+        const amountDisplay = document.getElementById("amountDisplay");
+        if (mechanica_2 > 0) {
+            amountDisplay.innerHTML = "عدد الكتب المتوفرة للإيجار: " + mechanica_2;
+        } else {
+            amountDisplay.innerHTML = "غير متوفرة";
+        }
+    }
+
+    // Initial display of the amount
+    updateAmountDisplay();
+
+    // Add a click event listener for the "I want to rent" button
+    document.getElementById("buyButton").addEventListener("click", function () {
+        if (mechanica_2 > 0) {
+            // Decrement the book count
+            mechanica_2 -= 1;
+            
+            // Update the amount in localStorage
+            localStorage.setItem('mechanica2', mechanica_2.toString());
+
+            // Redirect to the "sendmail.html" page
+            window.location.href = "sendmail.html";
+        } else {
+            alert("عذرًا، الكتاب غير متوفر للإيجار.");
+        }
+    });
+</script>
+</body>
+</html>

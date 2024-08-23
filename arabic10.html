@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>استئجار كتب</title>
+    
+	<style>
+	.img-size {
+  width: 500px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+}
+	body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#new 1">الصفحة الرئيسية</a>
+  <a href="new 2.html">للاستعمال</a>
+  <a href="new 3.html">للتبرع</a>
+  <a href="new 4">مزيد</a>
+</div>
+	<style>
+
+        /* Add CSS to make text and button bigger */
+        #amountDisplay {
+            font-size: 36px; /* Increase the font size for the text */
+        }
+
+        #buyButton {
+            font-size: 24px; /* Increase the font size for the button */
+            margin-bottom: 20px; /* Add margin at the bottom of the button */
+        }
+
+        body {
+            background-color: #7F7675; /* Set the background color for the entire page */
+        }
+
+        .content {
+            text-align: right;
+            direction: rtl;
+        }
+
+        .right-align {
+            text-align: right;
+            direction: rtl;
+        }
+
+        p {
+            font-family: Arial, sans-serif;
+            font-style: Brush Script;
+            font-weight: bold;
+            font-size: 70px;
+            color: black;
+        }
+
+        /* Style for the book image */
+        #bookImage {
+            float: left; /* Float the image to the left */
+            margin-right: -20000px; /* Add margin to the right of the image */
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <p id="bookInfo">العربية لغتنا للصف العاشر</p>
+    <div id="amountDisplay"></div>
+    <!-- Add a button for "I want to rent" -->
+    <button id="buyButton" class="right-align">اريد الاستئجار</button>
+
+    <img id="bookImage" src="data:image/jpeg;base64,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" alt="חשמל" class="img-size"> <!-- Replace "book.jpg" with the actual image file path -->
+
+</div>
+
+<script>
+    // Retrieve the shared value from localStorage or set it to 0 if not present
+    let arabic_10 = parseInt(localStorage.getItem('arabic10')) || 0;
+
+    // Function to update the amount display
+    function updateAmountDisplay() {
+        const amountDisplay = document.getElementById("amountDisplay");
+        if (arabic_10 > 0) {
+            amountDisplay.innerHTML = "عدد الكتب المتوفرة للإيجار: " + arabic_10;
+        } else {
+            amountDisplay.innerHTML = "غير متوفرة";
+        }
+    }
+
+    // Initial display of the amount
+    updateAmountDisplay();
+
+    // Add a click event listener for the "I want to rent" button
+    document.getElementById("buyButton").addEventListener("click", function () {
+        if (arabic_10 > 0) {
+            // Decrement the book count
+            arabic_10 -= 1;
+            
+            // Update the amount in localStorage
+            localStorage.setItem('arabic10', arabic_10.toString());
+
+            // Redirect to the "sendmail.html" page
+            window.location.href = "sendmail.html";
+        } else {
+            alert("عذرًا، الكتاب غير متوفر للإيجار.");
+        }
+    });
+</script>
+</body>
+</html>
